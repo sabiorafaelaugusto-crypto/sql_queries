@@ -1,8 +1,8 @@
 # Análise de Funil de Marketing de um SaaS com SQL
 
-Projeto de estudo em SQL (SQLite) simulando o dia a dia de **Marketing Operations** em uma empresa SaaS: da captação de leads à assinatura paga, medindo eficiência de canais, conversão e receita.
+Caso prático de consultas SQL (SQLite) aplicado a **Marketing Operations** em uma empresa SaaS: da captação de leads à assinatura paga, medindo eficiência de canais, conversão e receita.
 
-> Os dados são **fictícios**, gerados por script determinístico. Qualquer pessoa que rode o `00-setup.sql` obtém exatamente o mesmo banco.
+> **Sobre os dados:** o banco é **sintético** e não contém informações de clientes reais. Ele é gerado por script determinístico: qualquer pessoa que rode o `00-setup.sql` obtém exatamente o mesmo resultado.
 
 ## Cenário
 
@@ -33,7 +33,7 @@ erDiagram
 | `email_events` | Envios de e-mail com flags de abertura e clique | 1.800 |
 
 **Observações sobre os dados:**
-- `country` e `company_size` têm valores nulos de propósito, para praticar tratamento de qualidade de dados.
+- `country` e `company_size` têm valores nulos de propósito, para simular problemas de qualidade de dados.
 - `canceled_at` vazio indica assinatura ativa.
 - Cada lead pertence a uma única campanha (sem atribuição multi-touch).
 
@@ -45,9 +45,10 @@ erDiagram
 - **Análises avançadas:** tempo até a conversão, churn, volume vs. qualidade de canais, e-mail vs. conversão (CTE, `CASE`, datas)
 - **Desafios:** ranking por CAC dentro do canal, MRR acumulado, coorte por mês de criação (window functions)
 
-## Estrutura do repositório
+## Estrutura da pasta
 
 ```
+marketing-ops/
 ├── README.md
 ├── 00-setup.sql       # criação das tabelas e carga dos dados
 └── 01-analises.sql    # queries comentadas, organizadas por nível
