@@ -54,9 +54,3 @@ marketing-ops/
 └── 01-analises.sql    # commented queries, organized by level
 ```
 
-## How to Reproduce
-
-1. Open [SQLite Online](https://sqliteonline.com/) (or DB Browser for SQLite, or `sqlite3` in the terminal).
-2. Run the entire contents of `00-setup.sql`.
-3. Check the data load: 12 campaigns, 600 leads, 300 trials, 130 subscriptions, and 1,800 email events.
-4. Run the queries in `01-analises.sql`, one at a time.
